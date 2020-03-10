@@ -5,19 +5,16 @@
 classDiagram
       Condominio *-- Bloco
       Bloco *-- Apartamento
-      Apartamento1 *-- Despesa 
+      Bloco "1" o-- "*" Despesa
 
-      class Duck{
-          +String beakColor
-          +swim()
-          +quack()
+      class Apartamento{
+          +fracaoIdeal
+          +imprimirDemonstrativo()
       }
-      class Fish{
-          -int sizeInFeet
-          -canEat()
+      class Despesa{
+          -amount valor
       }
-      class Zebra{
-          +bool is_wild
-          +run()
+      class Condominio{
+          +imprimirRelatorio()
       }
 ```
